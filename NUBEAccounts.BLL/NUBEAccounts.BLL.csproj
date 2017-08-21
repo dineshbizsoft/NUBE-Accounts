@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E4E2CE4-51ED-4A66-B13B-62F7D96EF9E7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NUBEAccounts.BLL</RootNamespace>
+    <AssemblyName>NUBEAccounts.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.2.2\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountGroup.cs" />
+    <Compile Include="BalanceSheet.cs" />
+    <Compile Include="BankReconcilation.cs" />
+    <Compile Include="CompanyDetail.cs" />
+    <Compile Include="CreditLimitType.cs" />
+    <Compile Include="CustomFormat.cs" />
+    <Compile Include="DataKeyValue.cs" />
+    <Compile Include="ExpenseReport.cs" />
+    <Compile Include="FormPrefix.cs" />
+    <Compile Include="GeneralLedger.cs" />
+    <Compile Include="IncomeExpenditure.cs" />
+    <Compile Include="IncomeReport.cs" />
+    <Compile Include="Journal.cs" />
+    <Compile Include="JournalDetail.cs" />
+    <Compile Include="Ledger.cs" />
+    <Compile Include="NubeAccountClient.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="PaymentDetail.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipt.cs" />
+    <Compile Include="ReceiptAndPayment.cs" />
+    <Compile Include="ReceiptDetail.cs" />
+    <Compile Include="SubsidaryAccounts.cs" />
+    <Compile Include="TrialBalance.cs" />
+    <Compile Include="UserAccount.cs" />
+    <Compile Include="UserType.cs" />
+    <Compile Include="UserTypeDetail.cs" />
+    <Compile Include="UserTypeFormDetail.cs" />
+    <Compile Include="Validation.cs" />
+    <Compile Include="VoucherReport.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ExpenseReport.datasource" />
+    <None Include="Properties\DataSources\GeneralLedger.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NUBEAccounts.Common\NUBEAccounts.Common.csproj">
+      <Project>{5712e20b-a24d-49c4-a816-2db8bf9b1cb7}</Project>
+      <Name>NUBEAccounts.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NUBEAccounts.Message\NUBEAccounts.Message.csproj">
+      <Project>{cb2cc0eb-4f8e-48fb-81d2-07e5dfe85f86}</Project>
+      <Name>NUBEAccounts.Message</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

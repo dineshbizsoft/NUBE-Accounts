@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{29340AFD-97E5-41E9-B6C6-779DBFA90E1E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NUBEAccounts.Pl</RootNamespace>
+    <AssemblyName>NUBEAccounts.Pl</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MahApps.Metro, Version=1.5.0.23, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.5.0\lib\net45\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.MahApps, Version=0.0.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.MahApps.0.0.10\lib\net45\MaterialDesignThemes.MahApps.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.3.0.823, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.3.0.823\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Client, Version=2.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Client.2.2.2\lib\net45\Microsoft.AspNet.SignalR.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.v12.12.0.0.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Controls.DataVisualization.Toolkit.4.0.0.0\lib\net40-Client\System.Windows.Controls.DataVisualization.Toolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.5.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="frm\frmHome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\frmLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\frmWelcome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Master\frmAccountGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Master\frmLedger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Master\FundSetting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\DailyBankBalance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmActivityReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmBalanceSheet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmBalanceSheetPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmExpenseReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmExpenseReportPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmGeneralLedger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmGeneralLedgerPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmIncomeAndExpenditure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmIncomeAndExpenditurePrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmNECReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmNECReportPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmPaymentAndReceipt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmPaymentReceiptPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmSubsidaryAccounts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmSubsidaryAccountsPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmTrialBalance.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\frmTrialBalancePrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\IncomeReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\IncomeReportPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\IndividualReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\NECReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Reports\VoucherReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Transaction\frmBankReconciliation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Transaction\frmBankReconciliationPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Transaction\frmJournal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Transaction\frmLedgerOpening.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Transaction\frmLedgerOpeningPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Transaction\frmPayment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Transaction\frmReceipt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Vouchers\frmQuickJournalVoucher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Vouchers\frmQuickPayment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frm\Vouchers\frmQuickReceipt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Conversion\CurrencyInWordConverter.cs" />
+    <Compile Include="Conversion\CurrencySymbolConverter.cs" />
+    <Compile Include="Conversion\DateFormatConverter.cs" />
+    <Compile Include="Conversion\NumberFormatConverter.cs" />
+    <Compile Include="Conversion\SumValues.cs" />
+    <Compile Include="Conversion\VisibilityConverter.cs" />
+    <Compile Include="CTRL\DataGridNumericColumn.cs" />
+    <Compile Include="frm\frmHome.xaml.cs">
+      <DependentUpon>frmHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmLogin.xaml.cs">
+      <DependentUpon>frmLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmWelcome.xaml.cs">
+      <DependentUpon>frmWelcome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmAccountGroup.xaml.cs">
+      <DependentUpon>frmAccountGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\frmLedger.xaml.cs">
+      <DependentUpon>frmLedger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Master\FundSetting.xaml.cs">
+      <DependentUpon>FundSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\DailyBankBalance.xaml.cs">
+      <DependentUpon>DailyBankBalance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmActivityReport.xaml.cs">
+      <DependentUpon>frmActivityReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmBalanceSheet.xaml.cs">
+      <DependentUpon>frmBalanceSheet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmBalanceSheetPrint.xaml.cs">
+      <DependentUpon>frmBalanceSheetPrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmExpenseReport.xaml.cs">
+      <DependentUpon>frmExpenseReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmExpenseReportPrint.xaml.cs">
+      <DependentUpon>frmExpenseReportPrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmGeneralLedger.xaml.cs">
+      <DependentUpon>frmGeneralLedger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmGeneralLedgerPrint.xaml.cs">
+      <DependentUpon>frmGeneralLedgerPrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmIncomeAndExpenditure.xaml.cs">
+      <DependentUpon>frmIncomeAndExpenditure.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmIncomeAndExpenditurePrint.xaml.cs">
+      <DependentUpon>frmIncomeAndExpenditurePrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmNECReport.xaml.cs">
+      <DependentUpon>frmNECReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmNECReportPrint.xaml.cs">
+      <DependentUpon>frmNECReportPrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmPaymentAndReceipt.xaml.cs">
+      <DependentUpon>frmPaymentAndReceipt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmPaymentReceiptPrint.xaml.cs">
+      <DependentUpon>frmPaymentReceiptPrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmSubsidaryAccounts.xaml.cs">
+      <DependentUpon>frmSubsidaryAccounts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmSubsidaryAccountsPrint.xaml.cs">
+      <DependentUpon>frmSubsidaryAccountsPrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmTrialBalance.xaml.cs">
+      <DependentUpon>frmTrialBalance.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\frmTrialBalancePrint.xaml.cs">
+      <DependentUpon>frmTrialBalancePrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\IncomeReport.xaml.cs">
+      <DependentUpon>IncomeReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\IncomeReportPrint.xaml.cs">
+      <DependentUpon>IncomeReportPrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\IndividualReport.xaml.cs">
+      <DependentUpon>IndividualReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\NECReport.xaml.cs">
+      <DependentUpon>NECReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Reports\VoucherReport.xaml.cs">
+      <DependentUpon>VoucherReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmBankReconciliation.xaml.cs">
+      <DependentUpon>frmBankReconciliation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmBankReconciliationPrint.xaml.cs">
+      <DependentUpon>frmBankReconciliationPrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmJournal.xaml.cs">
+      <DependentUpon>frmJournal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmLedgerOpening.xaml.cs">
+      <DependentUpon>frmLedgerOpening.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmLedgerOpeningPrint.xaml.cs">
+      <DependentUpon>frmLedgerOpeningPrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmPayment.xaml.cs">
+      <DependentUpon>frmPayment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Transaction\frmReceipt.xaml.cs">
+      <DependentUpon>frmReceipt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Vouchers\frmQuickJournalVoucher.xaml.cs">
+      <DependentUpon>frmQuickJournalVoucher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Vouchers\frmQuickPayment.xaml.cs">
+      <DependentUpon>frmQuickPayment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Vouchers\frmQuickReceipt.xaml.cs">
+      <DependentUpon>frmQuickReceipt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="frm\Images\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NUBEAccounts.BLL\NUBEAccounts.BLL.csproj">
+      <Project>{0e4e2ce4-51ed-4a66-b13b-62f7d96ef9e7}</Project>
+      <Name>NUBEAccounts.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NUBEAccounts.Common\NUBEAccounts.Common.csproj">
+      <Project>{5712e20b-a24d-49c4-a816-2db8bf9b1cb7}</Project>
+      <Name>NUBEAccounts.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NUBEAccounts.Message\NUBEAccounts.Message.csproj">
+      <Project>{cb2cc0eb-4f8e-48fb-81d2-07e5dfe85f86}</Project>
+      <Name>NUBEAccounts.Message</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NUBEAccounts.Reports\NUBEAccounts.Reports.csproj">
+      <Project>{261745e1-8229-43f1-ba42-7ae99c6da37d}</Project>
+      <Name>NUBEAccounts.Reports</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="frm\Images\ABLoginHead1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
