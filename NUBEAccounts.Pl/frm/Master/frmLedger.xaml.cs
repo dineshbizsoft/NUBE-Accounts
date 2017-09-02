@@ -56,7 +56,8 @@ namespace NUBEAccounts.Pl.frm.Master
 
             var AUGIds = BLL.AccountGroup.toList.Select(x => x.UnderGroupId).ToList();
 
-            cmbAccountGroupId.ItemsSource = BLL.AccountGroup.toList.Where(x => !AUGIds.Contains(x.Id)).ToList();
+            //cmbAccountGroupId.ItemsSource = BLL.AccountGroup.toList.Where(x => !AUGIds.Contains(x.Id)).ToList();
+            cmbAccountGroupId.ItemsSource = BLL.AccountGroup.toList.ToList();
             cmbAccountGroupId.DisplayMemberPath = "GroupName";
             cmbAccountGroupId.SelectedValuePath = "Id";
 

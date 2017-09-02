@@ -14,8 +14,7 @@ namespace NUBEAccounts.BLL
         #region Fileds
 
         private static ObservableCollection<Ledger> _toList;
-        private static ObservableCollection<Ledger> _Sd_toList;
-        private static ObservableCollection<Ledger> _Sc_toList;
+      
         private static List<string> _ACTypeList;
 
         private int _Id;
@@ -120,6 +119,7 @@ namespace NUBEAccounts.BLL
                 _toList = value;
             }
         }
+       
 
 
         public static List<string> ACTypeList
@@ -649,8 +649,7 @@ namespace NUBEAccounts.BLL
         public static void Init()
         {
             _toList = null;
-            _Sd_toList = null;
-            _Sc_toList = null;
+          
         }
 
         private void SetAccountName()

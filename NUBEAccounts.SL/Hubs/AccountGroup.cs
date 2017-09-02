@@ -18,7 +18,7 @@ namespace NUBEAccounts.SL.Hubs
         }
         public List<BLL.AccountGroup> accountGroup_List()
         {
-            return DB.AccountGroups.Where(x => x.CompanyId == Caller.CompanyId).ToList()
+             return DB.AccountGroups.Where(x => x.CompanyId == Caller.CompanyId).ToList()
                                .Select(x => AccountGroupDAL_BLL(x)).ToList();
         }
 

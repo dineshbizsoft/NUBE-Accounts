@@ -107,5 +107,17 @@ namespace NUBEAccounts.Pl.frm
                 e.Cancel = true;
             }
         }
+
+        
+
+        private void btnAddNewFund_Click(object sender, RoutedEventArgs e)
+        {
+            frmNewFund f = new frmNewFund();
+            f.data.Clear();
+            f.data.CompanyType = "Company";         
+            f.ShowDialog();
+         
+
+        }
     }
 }

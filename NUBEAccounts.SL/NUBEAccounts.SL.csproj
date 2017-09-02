@@ -237,6 +237,7 @@
     <Compile Include="Hubs\CompanyDetail.cs" />
     <Compile Include="Hubs\CreditLimitType.cs" />
     <Compile Include="Hubs\CustomFormat.cs" />
+    <Compile Include="Hubs\DailyBankBalance.cs" />
     <Compile Include="Hubs\DataKeyValue.cs" />
     <Compile Include="Hubs\ExpenseReport.cs" />
     <Compile Include="Hubs\GeneralLedger.cs" />
@@ -245,6 +246,7 @@
     <Compile Include="Hubs\Journal.cs" />
     <Compile Include="Hubs\Ledger.cs" />
     <Compile Include="Hubs\NUBEServerHub.cs" />
+    <Compile Include="Hubs\PayeeList.cs" />
     <Compile Include="Hubs\Payment.cs" />
     <Compile Include="Hubs\Receipt.cs" />
     <Compile Include="Hubs\ReceiptAndPayment.cs" />
